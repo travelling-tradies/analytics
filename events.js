@@ -25,5 +25,5 @@ document.addEventListener('DOMContentLoaded', function() {
       console.debug('GA tracking form submit');
       ga('send', 'event', 'form', 'submit');
     });
-  };
+  });
 });
