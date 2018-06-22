@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', function() {
     var action = 'click';
     var label = '';
     if (el.tagName) {
-     label += target.tagName;
+     label += el.tagName;
     }
     if (el.id) {
-     label += '#' + target.id ;
+     label += '#' + el.id ;
     }
     if (el.className) {
-     label += '.' + target.className.replace(' ', '.');
+     label += '.' + el.className.replace(' ', '.');
     }
     console.debug('GA tracking click event:', category, action, label);
     ga('send', 'event', category, action, label);
