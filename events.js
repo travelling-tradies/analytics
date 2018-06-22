@@ -20,9 +20,9 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // track all form submits
-  document.querySelectorAll('form').forEach(function(el) {
-    el.addEventListener('submit', function(e) {
-      console.debug('GA tracking form submit');
+  document.querySelectorAll('[type="submit"]').forEach(function(el) {
+    el.addEventListener('click', function(e) {
+      console.debug('GA tracking form submit button clicked');
       ga('send', 'event', 'form', 'submit');
     });
   });
