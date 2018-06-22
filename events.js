@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // track all form submits
+  // squarespace hijacks form submit, so we work off clicking submit buttons
   document.querySelectorAll('[type="submit"]').forEach(function(el) {
     el.addEventListener('click', function(e) {
       console.debug('GA tracking form submit button clicked');
