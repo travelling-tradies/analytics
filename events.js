@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // generic click event tracking
   document.body.addEventListener('click', function(e) {
     var target = e.target;
     var category = 'dom-element';
@@ -17,4 +18,12 @@ document.addEventListener('DOMContentLoaded', function() {
     ga('send', 'event', category, action, label);
     return true;
   });
+
+  // track all form submits
+  document.querySelectorAll('form').forEach(function(el) {
+    el.addEventListener('submit', function(e) {
+      console.debug('GA tracking form submit');
+      ga('send', 'event', 'form', 'submit');
+    });
+  };
 });
