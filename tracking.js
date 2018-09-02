@@ -1,3 +1,14 @@
+/**
+ * Google tag manager/optimize
+ **/
+
+// google optimize
+ga('require', 'GTM-5T8RKZX');
+
+/**
+ * Google analytics event tracking
+ **/
+
 var matches = function(el, selector) {
   return (el.matches || el.matchesSelector || el.msMatchesSelector || el.mozMatchesSelector || el.webkitMatchesSelector || el.oMatchesSelector).call(el, selector);
 };
@@ -32,6 +43,10 @@ document.addEventListener('DOMContentLoaded', function() {
     return true;
   });
 });
+
+/**
+ * Hotjar
+ **/
 
 //Hotjar heatmap tracking code
 (function(h,o,t,j,a,r){
